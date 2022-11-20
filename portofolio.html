@@ -7,7 +7,6 @@
     <title>Denissa Trista</title>
     <link rel = "icon" href = "assets/girl logo.png" 
         type = "image/x-icon">
-        <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
@@ -15,7 +14,7 @@
   <div>
     <ul class="nav nav-tabs fixed-top justify-content-end" style="background-color: black; font-family: Georgia, 'Times New Roman', Times, serif;">
         <li class="nav-item">
-          <a class="nav-link" href="homepage.html" style="color: white;">HOME</a>
+          <a class="nav-link" href="home.html" style="color: white;">HOME</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#" style="color: white;">PRODUCT</a>
@@ -31,12 +30,11 @@
     <div class="col">
         <img class="rounded-circle text-center" src="assets/fotodenissa.jpeg" alt="fotodenissa" height="200px" style="padding-left: 20px;"></div>
     <div class="col">
-        <h2>Denissa Trista</h2>
-        <img src="assets/H8 logo.png" alt="logoh8" width="125px">
-    <p>Business Development & Partnership</p>
+        <h2 id="text-name">Denissa Trista</h2>
+    <p id="text-role">Business Development & Partnership</p>
     <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-outline-dark" type="button">Contact Me</button>
-        <button class="btn btn-outline-dark" type="button">My Resume</button>
+        <button class="btn btn-outline-dark" type="button" id="button-edit">Edit</button>
+        <button class="btn btn-outline-dark" type="button">Resume</button>
       </div></div>
     <div class="col-6">
         <table class="table table-borderless" style="border-left: 3px solid gray;">
@@ -44,63 +42,63 @@
               <tr>
                 <td style="width: 5%;"> </td>
                 <td style="width: 20%;">Availability</td>
-                <td>Full Time</td>
+                <td id="text-avail">Full Time</td>
               </tr>
               <tr>
                 <td> </td>
                 <td>Age</td>
-                <td>24</td>
+                <td id="text-age">24</td>
               </tr>
               <tr>
                 <td> </td>
                 <td>Location</td>
-                <td>Bekasi, ID</td>
+                <td id="text-location">Bekasi, ID</td>
               </tr>
               <tr>
                 <td> </td>
                 <td>Experience</td>
-                <td>2 years</td>
+                <td id="text-experience">2 years</td>
               </tr>
               <tr>
                 <td> </td>
                 <td>Email</td>
-                <td>denissa@hacktiv8.com</td>
+                <td id="text-email">denissa@hacktiv8.com</td>
               </tr>
             </tbody>
           </table>    
 </div>
   </div>
-      <form style="margin-left: 100px; margin-right: 100px; margin-top: 50px; margin-bottom: 100px; background-color: white;" class="shadow">
+      <form style="display: none; margin-left: 100px; margin-right: 100px; margin-top: 50px; margin-bottom: 100px; background-color: white;" class="shadow" id="form-data">
         <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Name</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="form-name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="form-name">
           </div>
         <div class="mb-1">
-          <label for="exampleInputPassword1" class="form-label">Role</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="form-role" class="form-label">Role</label>
+          <input type="text" class="form-control" id="form-role">
         </div>
         <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Availability</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="form-availability" class="form-label">Availability</label>
+            <input type="text" class="form-control" id="form-avail">
           </div>
           <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Age</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="form-age" class="form-label">Age</label>
+            <input type="text" class="form-control" id="form-age">
           </div>
           <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Location</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="form-location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="form-location">
           </div>
           <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Years Experience</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="form-experience" class="form-label">Years Experience</label>
+            <input type="text" class="form-control" id="form-experience">
           </div>
           <div class="mb-1">
-            <label for="exampleInputPassword1" class="form-label">Email</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="We'll never share your email with anyone else.">
+            <label for="form-email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="form-email">
           </div>
           <div class="d-grid gap-2">
-            <button class="btn btn-dark" type="button">Submit</button>
+            <button class="btn btn-dark" type="submit" id="button-submit">Submit</button>
           </div>
       </form>
   </div>
@@ -108,7 +106,7 @@
 
     </div>
     
-    <p style="background-color: black; color:white; font-size: small; margin-bottom:0px !important">© 2022 Denissa Trista</p>
+    <script src="scriptportofolio.js"></script>
 
   </body>
 </html>
