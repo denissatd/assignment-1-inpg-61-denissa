@@ -18,16 +18,23 @@ let textEmail = document.querySelector('#text-email')
 let formData = document.getElementById('form-data')
 
 buttonSubmit.addEventListener('click', function (event) {
-    event.preventDefault()
-    console.log(inputName.value, inputRole.value, inputAvailability.value, inputAge.value, inputLocation.value, inputExperience.value, inputEmail.value)
-    textName.innerText = inputName.value
-    textRole.innerText = inputRole.value
-    textAvailability.innerText = inputAvailability.value
-    textAge.innerText = inputAge.value
-    textLocation.innerText = inputLocation.value
-    textExperience.innerText = inputExperience.value
-    textEmail.innerText = inputEmail.value
-    formData.style.display = 'none'
+    var konfirmasi = confirm('Apakah Anda yakin ingin mengubah data?')
+        if (konfirmasi == true) {
+            event.preventDefault()
+            console.log(inputName.value, inputRole.value, inputAvailability.value, inputAge.value, inputLocation.value, inputExperience.value, inputEmail.value)
+            textName.innerText = inputName.value
+            textRole.innerText = inputRole.value
+            textAvailability.innerText = inputAvailability.value
+            textAge.innerText = inputAge.value
+            textLocation.innerText = inputLocation.value
+            textExperience.innerText = inputExperience.value
+            textEmail.innerText = inputEmail.value
+            formData.style.display = 'none'
+            alert(`Data telah berhasil diubah`)
+        }
+        else {
+            event.preventDefault()
+        }
 })
 
 buttonEdit.addEventListener('click', function (event) {
