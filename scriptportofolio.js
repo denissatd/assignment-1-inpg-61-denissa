@@ -30,7 +30,7 @@ buttonSubmit.addEventListener('click', function (event) {
             textExperience.innerText = inputExperience.value
             textEmail.innerText = inputEmail.value
             formData.style.display = 'none'
-            alert(`Data telah berhasil diubah`)
+            alert(`Data telah berhasil diubah.`)
         }
         else {
             event.preventDefault()
