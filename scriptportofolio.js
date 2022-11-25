@@ -18,7 +18,8 @@ let textEmail = document.querySelector('#text-email')
 let formData = document.getElementById('form-data')
 
 buttonSubmit.addEventListener('click', function (event) {
-    var konfirmasi = confirm('Apakah Anda yakin ingin mengubah data?')
+    if (inputName.value != "" && inputAge.value  != "" && inputAvailability.value != ""  && inputRole.value != "" && inputLocation.value != "" && inputExperience.value != "" && inputEmail.value != ""){
+        var konfirmasi = confirm('Apakah Anda yakin ingin mengubah data?')
         if (konfirmasi == true) {
             event.preventDefault()
             console.log(inputName.value, inputRole.value, inputAvailability.value, inputAge.value, inputLocation.value, inputExperience.value, inputEmail.value)
@@ -35,6 +36,11 @@ buttonSubmit.addEventListener('click', function (event) {
         else {
             event.preventDefault()
         }
+    }
+    else {
+        alert("Mohon cek kembali, data tidak boleh ada yang kosong!")
+        event.preventDefault()
+    }
 })
 
 buttonEdit.addEventListener('click', function (event) {
